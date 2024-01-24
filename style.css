@@ -69,11 +69,12 @@ h1 {
 }
 .output {
   color: white;
-  font-size: 30px;
+  font-size: 25px;
   display: flex;
   flex-direction: row-reverse;
   text-align: right;
   justify-content: flex-end;
+  margin-right: 10px;
 }
 
 .tempbutton {
@@ -107,6 +108,7 @@ h1 {
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
   margin: 5px;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
   align-items: center;
   font-size: 25pt;
   font-family: "Monomaniac One", sans-serif;

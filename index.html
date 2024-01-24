@@ -49,9 +49,7 @@
           <button class="button" id="add" onclick="operator('*')">*</button>
           <button class="button" id="add" onclick="operator('-')">-</button>
           <button class="button" id="add" onclick="operator('+')">+</button>
-          <button class="buttonE" id="calculate" onclick="calculate()">
-            =
-          </button>
+          <button class="buttonE" id="calculate" onclick="calcul()">=</button>
         </div>
       </div>
     </div>
@@ -71,25 +69,34 @@
       }
       function add(value) {
         document.getElementById("output").textContent += value;
+        if (output.textContent.length > 17) {
+          output.textContent = "ERROR, terlalu panjang";
+        }
         rule += value;
       }
       function operator(operator) {
         document.getElementById("output").textContent = "";
-        rule += operator;
+        if (value.length < 1) {
+          document.getElementById("output").textContent = "error";
+        } else {
+          rule += operator;
+        }
       }
-      function calculate() {
+      function calcul() {
         const calculate = eval(rule);
-        const result = parseFloat(calculate.toFixed(2));
+        const result = parseFloat(calculate.toFixed(4));
         if (result !== undefined) {
           output.textContent = result;
         }
+        if (output.textContent.length > 17) {
+          output.textContent = "ERROR, terlalu panjang";
+        }
       }
       function percent() {
-        //persen
-        const currentValue = parseFloat(rule);
-        const percentValue = currentValue / 100;
-        output.textContent = percentValue;
-        rule = percentValue.toString();
+        const nilaiAwal = parseFloat(rule);
+        const nilaiSekarang = nilaiAwal / 100;
+        output.textContent = nilaiSekarang;
+        rule = nilaiSekarang.toString();
       }
     </script>
     <!-- <script src="index.js"></script> -->
