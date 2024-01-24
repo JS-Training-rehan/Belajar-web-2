@@ -20,7 +20,7 @@
           class="output"
           id="output"
           name="output"
-          aria-placeholder="0"
+          placeholder="0"
         ></output>
       </div>
       <div class="tempbutton">
@@ -65,11 +65,13 @@
 
       function clear() {
         document.getElementById("output").textContent = "";
+        document.getElementById("output").style.color = "white";
         rule = "";
       }
       function add(value) {
         document.getElementById("output").textContent += value;
         if (output.textContent.length > 17) {
+          document.getElementById("output").style.color = "red";
           output.textContent = "ERROR, terlalu panjang";
         }
         rule += value;
@@ -89,6 +91,7 @@
           output.textContent = result;
         }
         if (output.textContent.length > 17) {
+          document.getElementById("output").style.color = "red";
           output.textContent = "ERROR, terlalu panjang";
         }
       }
