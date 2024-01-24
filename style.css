@@ -45,8 +45,7 @@ h1 {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  box-shadow: #333;
-  text-shadow: #333;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.2);
 }
 
 .led {
@@ -66,6 +65,7 @@ h1 {
   border-color: white;
   border-width: 5px;
   border-style: solid;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
 .output {
   color: white;
@@ -89,6 +89,7 @@ h1 {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
 .button {
   height: 50px;
@@ -111,8 +112,9 @@ h1 {
   font-family: "Monomaniac One", sans-serif;
   font-weight: 400;
   font-style: normal;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
-.button-equal {
+.buttonE {
   height: 105px;
   width: 50px;
   display: flex;
@@ -132,4 +134,5 @@ h1 {
   font-family: "Monomaniac One", sans-serif;
   font-weight: 400;
   font-style: normal;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
 }

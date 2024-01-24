@@ -5,7 +5,7 @@ function add(value) {
   }
   output.textContent = result;
 }
-function operator(value) {
+function add(value) {
   document.getElementById("output").textContent += value;
   if (output.textContent.length > 10) {
     output.textContent = "error, kepanjangan";
@@ -17,12 +17,13 @@ function clearOutput() {
 }
 function calculate() {
   var output = document.getElementById("output");
-  var result = eval(output.textContent);
-  if (result.toString().length > 10) {
-    result = "error, kepanjangan";
-  } else {
-    result = parseFloat(result.toFixed(2));
-  }
+  var calcu = eval(output.textContent);
+  // if (result.toString().length > 10) {
+  //   result = "error, kepanjangan";
+  // } else {
+  //   result = parseFloat(result.toFixed(2));
+  // }
+  var result = parseFloat(calcu.toFixed(2));
   output.textContent = result;
 }
 function persen() {
